@@ -54,7 +54,7 @@ export function formatAccentConfig(
 
 export function formatAccentInstallScript(config: string): string {
     return [
-        "cat <<'EOF' | sudo tee /etc/system-colors >/dev/null",
+        "cat <<'EOF' | sudo tee /etc/system-colors.conf >/dev/null",
         config,
         "EOF",
     ].join("\n");

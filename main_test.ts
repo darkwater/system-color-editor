@@ -67,7 +67,7 @@ Deno.test("formatAccentInstallScript wraps config in tee heredoc", () => {
   assertEquals(
     formatAccentInstallScript(config),
     [
-      "cat <<'EOF' | sudo tee /etc/system-colors >/dev/null",
+      "cat <<'EOF' | sudo tee /etc/system-colors.conf >/dev/null",
       'ACCENT_HOSTNAME="build-server-01"',
       'ACCENT_FG_HEX="#d0d0d0"',
       'ACCENT_BG_HEX="#1b1f27"',
